@@ -4,13 +4,29 @@ import '@undp-data/undp-visualization-library/dist/style.css';
 function AppPopulation() {
   return (
     <div className='undp-container flex-div flex-wrap'>
-      <div className='grow'>
+      <div style={{ width: 'calc(50% - 1rem)' }}>
         <SingleGraphDashboard
           dataSettings={{
             dataURL: '/data/dataPopulation.csv',
             fileType: 'csv',
           }}
           graphType='horizontalBarChart'
+          dataSelectionOptions={[
+            {
+              label: 'Select indicator',
+              allowedColumnIds: [
+                {
+                  value: 'flooded_pop_2024',
+                  label: 'Total count',
+                },
+                {
+                  value: 'flooded_pop_2024_perc',
+                  label: 'Percentage of Population',
+                },
+              ],
+              chartConfigId: 'size',
+            },
+          ]}
           graphDataConfiguration={[
             { columnId: 'shapeName', chartConfigId: 'label' },
             {
@@ -20,6 +36,7 @@ function AppPopulation() {
           ]}
           graphSettings={{
             graphTitle: 'Number of People Affected by Flood',
+            graphDescription: 'Top 20 most affected upazilas',
             leftMargin: 132,
             padding: '16px 32px 16px 16px',
             backgroundColor: '#FAFAFA',
@@ -47,19 +64,69 @@ function AppPopulation() {
           }}
         />
       </div>
-      <div className='grow'>
+      <div style={{ width: 'calc(50% - 1rem)' }}>
         <SingleGraphDashboard
           dataSettings={{
             dataURL: '/data/dataPopulation.csv',
             fileType: 'csv',
           }}
           graphType='horizontalDumbbellChart'
+          dataFilters={[
+            {
+              column: 'flooded_female_pop_2024',
+              excludeValues: [''],
+            },
+            {
+              column: 'flooded_male_pop_2024',
+              excludeValues: [''],
+            },
+            {
+              column: 'flooded_child_pop_2024',
+              excludeValues: [''],
+            },
+            {
+              column: 'flooded_active_pop_2024',
+              excludeValues: [''],
+            },
+            {
+              column: 'flooded_elderly_pop_2024',
+              excludeValues: [''],
+            },
+          ]}
           filters={[
             {
               column: 'shapeName',
               singleSelect: false,
               clearable: true,
-              label: 'Filter by column name',
+              label: 'Filter by upazilas',
+            },
+          ]}
+          dataSelectionOptions={[
+            {
+              label: 'Select group',
+              allowedColumnIds: [
+                {
+                  value: 'flooded_female_pop_2024',
+                  label: 'Women',
+                },
+                {
+                  value: 'flooded_male_pop_2024',
+                  label: 'Men',
+                },
+                {
+                  value: 'flooded_child_pop_2024',
+                  label: 'Youth',
+                },
+                {
+                  value: 'flooded_active_pop_2024',
+                  label: 'Adults',
+                },
+                {
+                  value: 'flooded_elderly_pop_2024',
+                  label: 'Elderly',
+                },
+              ],
+              chartConfigId: 'x',
             },
           ]}
           graphDataConfiguration={[
@@ -71,13 +138,13 @@ function AppPopulation() {
           ]}
           graphSettings={{
             graphTitle: 'Affected Population by Gender and Age Groups',
+            graphDescription: 'Top 20 most affected upazilas',
             leftMargin: 132,
             padding: '16px 32px 16px 16px',
             backgroundColor: '#FAFAFA',
             topMargin: 32,
-            height: 666.4,
-            colorDomain: ['Women', 'Men'],
-            colors: ['#757AF0', '#02A38A', '#ff0000'],
+            height: 666,
+            colorDomain: ['Women', 'Men', 'Youth', 'Adults', 'Elderly'],
             showValues: false,
             tooltip: `<div class="padding-05">
             <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px; width: 340px;">
