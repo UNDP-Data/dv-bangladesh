@@ -131,7 +131,8 @@
               "topMargin": 32,
               "height": 666,
               "colorDomain": ["Women", "Men", "Youth", "Adults", "Elderly"],
-              "showValues": false
+              "showValues": false,
+              "graphDownload": true
             }
           }
         ]

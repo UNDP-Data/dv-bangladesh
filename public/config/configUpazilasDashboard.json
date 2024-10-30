@@ -107,7 +107,8 @@
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
               "showNAColor": false,
-              "colorLegendTitle": ""
+              "colorLegendTitle": "",
+              "graphDownload": true
             }
           },
           {
@@ -138,7 +139,8 @@
               "padding": "16px 32px 32px 16px",
               "leftMargin": 64,
               "backgroundColor": "#FAFAFA",
-              "colors": ["#757AF0", "#02A38A"]
+              "colors": ["#757AF0", "#02A38A"],
+              "graphDownload": true
             }
           }
         ]
@@ -172,7 +174,8 @@
               "graphTitle": "Affected population by age groups",
               "graphDescription": "Number of people",
               "padding": "16px 32px 32px 16px",
-              "backgroundColor": "#FAFAFA"
+              "backgroundColor": "#FAFAFA",
+              "graphDownload": true
             }
           },
           {
@@ -209,7 +212,8 @@
               "size": 1000,
               "showNAColor": false,
               "colorLegendTitle": "",
-              "leftMargin": 64
+              "leftMargin": 64,
+              "graphDownload": true
             }
           },
           {
@@ -243,7 +247,8 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
-              "fillContainer": false
+              "fillContainer": false,
+              "graphDownload": true
             }
           }
         ]
@@ -288,7 +293,8 @@
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
               "showNAColor": false,
-              "colorLegendTitle": ""
+              "colorLegendTitle": "",
+              "graphDownload": true
             }
           },
           {
@@ -325,7 +331,8 @@
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
               "showNAColor": false,
-              "colorLegendTitle": ""
+              "colorLegendTitle": "",
+              "graphDownload": true
             }
           }
         ]
@@ -362,7 +369,8 @@
               "graphTitle": "Affected buildings",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "colors": ["var(--red)", "var(--gray-400)"]
+              "colors": ["var(--red)", "var(--gray-400)"],
+              "graphDownload": true
             }
           },
           {
@@ -391,7 +399,8 @@
               "graphTitle": "Road infrastucture",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "colors": ["var(--red)", "var(--gray-400)"]
+              "colors": ["var(--red)", "var(--gray-400)"],
+              "graphDownload": true
             }
           },
           {
@@ -420,7 +429,8 @@
               "graphTitle": "Electricity infrastucture",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "colors": ["var(--red)", "var(--gray-400)"]
+              "colors": ["var(--red)", "var(--gray-400)"],
+              "graphDownload": true
             }
           }
         ]

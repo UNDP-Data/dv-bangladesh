@@ -53,7 +53,8 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "showValues": false,
-              "height": 2000
+              "height": 2000,
+              "graphDownload": true
             }
           },
           {
@@ -127,7 +128,8 @@
               "topMargin": 32,
               "height": 2000,
               "colorDomain": ["Women", "Men", "Youth", "Adults", "Elderly"],
-              "showValues": false
+              "showValues": false,
+              "graphDownload": true
             }
           }
         ]

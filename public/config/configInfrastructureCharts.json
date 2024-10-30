@@ -45,7 +45,8 @@
               "backgroundColor": "#FAFAFA",
               "showValues": true,
               "height": 700,
-              "showTicks": false
+              "showTicks": false,
+              "graphDownload": true
             }
           },
           {
@@ -76,7 +77,8 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "height": 700,
-              "rightMargin": 64
+              "rightMargin": 64,
+              "graphDownload": true
             }
           },
           {
@@ -107,7 +109,8 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "height": 700,
-              "rightMargin": 64
+              "rightMargin": 64,
+              "graphDownload": true
             }
           }
         ]

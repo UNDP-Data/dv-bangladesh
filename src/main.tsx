@@ -9,6 +9,7 @@ import AppPopulationMap from './AppPopulationMap';
 import AppUpazilasDashboard from './AppUpazilasDashboard';
 import AppInfrastructureFull from './AppInfrastructureFull';
 import AppInfrastructureCharts from './AppInfrastructureCharts';
+import AppCroplandFull from './AppCroplandFull';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -56,6 +57,15 @@ if (vizCropland) {
   rootEmbed.render(
     <React.StrictMode>
       <AppCropland />
+    </React.StrictMode>,
+  );
+}
+const vizCroplandFull = getEl('[data-viz-cropland-full]');
+if (vizCroplandFull) {
+  const rootEmbed = ReactDOM.createRoot(vizCroplandFull);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppCroplandFull />
     </React.StrictMode>,
   );
 }

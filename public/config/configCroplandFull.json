@@ -1,7 +1,7 @@
 {
   "dashboardId": "dashboard-id",
   "dataSettings": {
-    "dataURL": "https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/data/data.csv",
+    "dataURL": "/data/data.csv",
     "fileType": "csv",
     "dataFilters": [
       {
@@ -23,7 +23,7 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "flooded_building_count",
+                "column": "flooded_cropland",
                 "excludeValues": ["NA", null]
               }
             ],
@@ -33,11 +33,11 @@
                 "ui": "radio",
                 "allowedColumnIds": [
                   {
-                    "value": "flooded_building_count",
-                    "label": "Count"
+                    "value": "flooded_cropland",
+                    "label": "Square metres"
                   },
                   {
-                    "value": "percentage_flooded",
+                    "value": "flooded_cropland_perc",
                     "label": "Percentage of total"
                   }
                 ],
@@ -47,12 +47,12 @@
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
-                "columnId": "flooded_building_count",
+                "columnId": "flooded_cropland",
                 "chartConfigId": "size"
               }
             ],
             "settings": {
-              "graphTitle": "Affected buildings",
+              "graphTitle": "Affected cropland",
               "barPadding": 0.1,
               "sortData": "desc",
               "leftMargin": 132,
@@ -69,8 +69,8 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "shapeName",
-                "excludeValues": ["Kawkhali (Betbunia)"]
+                "column": "flooded_builtup",
+                "excludeValues": ["NA", null]
               }
             ],
             "dataSelectionOptions": [
@@ -79,11 +79,11 @@
                 "ui": "radio",
                 "allowedColumnIds": [
                   {
-                    "value": "flooded_road_length",
-                    "label": "Metres"
+                    "value": "flooded_builtup",
+                    "label": "Square metres"
                   },
                   {
-                    "value": "percentage_flooded_roads",
+                    "value": "flooded_builtup_perc",
                     "label": "Percentage of total"
                   }
                 ],
@@ -93,59 +93,12 @@
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
-                "columnId": "flooded_road_length",
+                "columnId": "flooded_builtup",
                 "chartConfigId": "size"
               }
             ],
             "settings": {
-              "graphTitle": "Affected roads",
-              "barPadding": 0.1,
-              "showTicks": false,
-              "showValues": true,
-              "sortData": "desc",
-              "leftMargin": 132,
-              "padding": "16px 32px 32px 16px",
-              "backgroundColor": "#FAFAFA",
-              "rightMargin": 64,
-              "height": 2000,
-              "graphDownload": true
-            }
-          },
-          {
-            "graphType": "horizontalBarChart",
-            "columnWidth": 1,
-            "dataFilters": [
-              {
-                "column": "shapeName",
-                "excludeValues": ["Kawkhali (Betbunia)"]
-              }
-            ],
-            "dataSelectionOptions": [
-              {
-                "label": "View by",
-                "ui": "radio",
-                "allowedColumnIds": [
-                  {
-                    "value": "flooded_grid_length",
-                    "label": "Metres"
-                  },
-                  {
-                    "value": "percentage_grid_flooded",
-                    "label": "Percentage of total"
-                  }
-                ],
-                "chartConfigId": "size"
-              }
-            ],
-            "graphDataConfiguration": [
-              { "columnId": "shapeName", "chartConfigId": "label" },
-              {
-                "columnId": "flooded_grid_length",
-                "chartConfigId": "size"
-              }
-            ],
-            "settings": {
-              "graphTitle": "Affected electricity grids",
+              "graphTitle": "Affected built up areas",
               "barPadding": 0.1,
               "showTicks": false,
               "showValues": true,
