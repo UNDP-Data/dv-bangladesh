@@ -10,6 +10,7 @@
     "padding": "0rem",
     "rows": [
       {
+        "height": 512,
         "columns": [
           {
             "graphType": "horizontalBarChart",
