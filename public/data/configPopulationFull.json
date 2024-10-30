@@ -1,0 +1,137 @@
+{
+  "dashboardId": "dashboard-id",
+  "dataSettings": {
+    "dataURL": "/data/data.csv",
+    "fileType": "csv"
+  },
+  "debugMode": true,
+  "dashboardLayout": {
+    "backgroundColor": false,
+    "padding": "1rem",
+    "rows": [
+      {
+        "height": 1600,
+        "columns": [
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "View by",
+                "ui": "radio",
+                "allowedColumnIds": [
+                  {
+                    "value": "flooded_pop_2024",
+                    "label": "Total count"
+                  },
+                  {
+                    "value": "flooded_pop_2024_perc",
+                    "label": "Percentage of population"
+                  }
+                ],
+                "chartConfigId": "size"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_pop_2024",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Number of people affected by flood in Bangladesh",
+              "sortData": "desc",
+              "barPadding": 0.1,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "showValues": false,
+              "height": 2000
+            }
+          },
+          {
+            "graphType": "horizontalDumbbellChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "flooded_female_pop_2024",
+                "excludeValues": ["NA"]
+              },
+              {
+                "column": "flooded_male_pop_2024",
+                "excludeValues": ["NA"]
+              },
+              {
+                "column": "flooded_child_pop_2024",
+                "excludeValues": ["NA"]
+              },
+              {
+                "column": "flooded_active_pop_2024",
+                "excludeValues": ["NA"]
+              },
+              {
+                "column": "flooded_elderly_pop_2024",
+                "excludeValues": ["NA"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "Select group",
+                "allowedColumnIds": [
+                  {
+                    "value": "flooded_female_pop_2024",
+                    "label": "Women"
+                  },
+                  {
+                    "value": "flooded_male_pop_2024",
+                    "label": "Men"
+                  },
+                  {
+                    "value": "flooded_child_pop_2024",
+                    "label": "Youth"
+                  },
+                  {
+                    "value": "flooded_active_pop_2024",
+                    "label": "Adults"
+                  },
+                  {
+                    "value": "flooded_elderly_pop_2024",
+                    "label": "Elderly"
+                  }
+                ],
+                "chartConfigId": "x"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": [
+                  "flooded_female_pop_2024",
+                  "flooded_male_pop_2024"
+                ],
+                "chartConfigId": "x"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected population by gender and age groups",
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "topMargin": 32,
+              "height": 2000,
+              "colorDomain": ["Women", "Men", "Youth", "Adults", "Elderly"],
+              "showValues": false
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

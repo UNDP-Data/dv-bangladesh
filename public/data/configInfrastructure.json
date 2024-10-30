@@ -1,0 +1,23 @@
+{
+  "dataSettings": {
+    "dataURL": "/data/data.csv",
+    "keyColumn": "shapeName",
+    "fileType": "csv"
+  },
+  "graphType": "GeohubMap",
+  "graphDataConfiguration": [
+    {
+      "chartConfigId": "label",
+      "columnId": ""
+    },
+    {
+      "chartConfigId": "size",
+      "columnId": ""
+    },
+    {
+      "chartConfigId": "color",
+      "columnId": ""
+    }
+  ],
+  "graphSettings": {}
+}

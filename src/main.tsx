@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppPopulation from './AppPopulation';
 import AppFloodedArea from './AppFloodedArea';
+import AppCropland from './AppCropland';
+import AppPopulation from './AppPopulation';
+import AppInfrastructure from './AppInfrastructure';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -25,21 +27,30 @@ if (vizPopulation) {
     </React.StrictMode>,
   );
 }
-// const vizCropland = getEl('[data-viz-cropland]');
-// if (vizCropland) {
-//   const rootEmbed = ReactDOM.createRoot(vizCropland);
-//   rootEmbed.render(
-//     <React.StrictMode>
-//       <AppCropland />
-//     </React.StrictMode>,
-//   );
-// }
+const vizCropland = getEl('[data-viz-cropland]');
+if (vizCropland) {
+  const rootEmbed = ReactDOM.createRoot(vizCropland);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppCropland />
+    </React.StrictMode>,
+  );
+}
 const vizFloodedArea = getEl('[data-viz-flooded-area]');
 if (vizFloodedArea) {
   const rootEmbed = ReactDOM.createRoot(vizFloodedArea);
   rootEmbed.render(
     <React.StrictMode>
       <AppFloodedArea />
+    </React.StrictMode>,
+  );
+}
+const vizInfrastructure = getEl('[data-viz-infrastructure]');
+if (vizInfrastructure) {
+  const rootEmbed = ReactDOM.createRoot(vizInfrastructure);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppInfrastructure />
     </React.StrictMode>,
   );
 }
