@@ -209,7 +209,6 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
-              "size": 1000,
               "showNAColor": false,
               "colorLegendTitle": "",
               "leftMargin": 64,
@@ -247,6 +246,7 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
+              "size": 300,
               "fillContainer": false,
               "graphDownload": true
             }
