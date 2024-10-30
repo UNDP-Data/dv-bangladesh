@@ -1,0 +1,148 @@
+{
+  "dashboardId": "dashboard-id",
+  "dataSettings": {
+    "dataURL": "/data/data.csv",
+    "fileType": "csv",
+    "dataFilters": [
+      {
+        "column": "shapeName",
+        "excludeValues": ["Kawkhali (Betbunia)"]
+      }
+    ]
+  },
+  "debugMode": true,
+  "dashboardLayout": {
+    "backgroundColor": false,
+    "padding": "0rem",
+    "rows": [
+      {
+        "height": 700,
+        "columns": [
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "total_flooded_building_area",
+                "excludeValues": ["NA"]
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "total_flooded_building_area",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected building area",
+              "graphDescription": "square meters",
+              "barPadding": 0.1,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "showValues": true,
+              "height": 700,
+              "showTicks": false
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_cropland",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected cropland",
+              "graphDescription": "square meters",
+              "barPadding": 0.1,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "showValues": true,
+              "rightMargin": 64,
+              "height": 700,
+              "showTicks": false
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_road_length",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected roads",
+              "graphDescription": "meters",
+              "barPadding": 0.1,
+              "showTicks": false,
+              "showValues": true,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "height": 700,
+              "rightMargin": 64
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_pop_2024",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected electricity grids",
+              "graphDescription": "meters",
+              "barPadding": 0.1,
+              "showTicks": false,
+              "showValues": true,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "height": 700,
+              "rightMargin": 64
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

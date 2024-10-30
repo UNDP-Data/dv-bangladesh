@@ -1,0 +1,206 @@
+{
+  "dashboardId": "dashboard-id",
+  "dataSettings": {
+    "dataURL": "/data/data.csv",
+    "fileType": "csv",
+    "dataFilters": [
+      {
+        "column": "shapeName",
+        "excludeValues": ["Kawkhali (Betbunia)"]
+      }
+    ]
+  },
+  "debugMode": true,
+  "dashboardLayout": {
+    "backgroundColor": false,
+    "padding": "0rem",
+    "rows": [
+      {
+        "height": 700,
+        "columns": [
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "total_flooded_building_area",
+                "excludeValues": ["NA"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "View by",
+                "ui": "radio",
+                "allowedColumnIds": [
+                  {
+                    "value": "total_flooded_building_area_perc",
+                    "label": "Percentage of total"
+                  },
+                  {
+                    "value": "total_flooded_building_area",
+                    "label": "Total count (hectares)"
+                  }
+                ],
+                "chartConfigId": "size"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "total_flooded_building_area_perc",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Building area",
+              "barPadding": 0.1,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "showValues": false,
+              "height": 700
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "View by",
+                "ui": "radio",
+                "allowedColumnIds": [
+                  {
+                    "value": "flooded_cropland_perc",
+                    "label": "Percentage of total"
+                  },
+                  {
+                    "value": "flooded_cropland",
+                    "label": "Total count (hectares)"
+                  }
+                ],
+                "chartConfigId": "size"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_cropland_perc",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Cropland",
+              "barPadding": 0.1,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "showValues": false,
+              "height": 700
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "View by",
+                "ui": "radio",
+                "allowedColumnIds": [
+                  {
+                    "value": "percentage_flooded_roads",
+                    "label": "Percentage of total"
+                  },
+                  {
+                    "value": "flooded_road_length",
+                    "label": "Total length (km)"
+                  }
+                ],
+                "chartConfigId": "size"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "percentage_flooded_roads",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Roads",
+              "barPadding": 0.1,
+              "maxValue": 100,
+              "showTicks": false,
+              "showValues": true,
+              "sortData": "desc",
+              "maxNumberOfBars": 20,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "height": 700
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "View by",
+                "ui": "radio",
+                "allowedColumnIds": [
+                  {
+                    "value": "flooded_pop_2024",
+                    "label": "Total count"
+                  },
+                  {
+                    "value": "flooded_pop_2024_perc",
+                    "label": "Percentage of population"
+                  }
+                ],
+                "chartConfigId": "size"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_pop_2024",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Electricity Infrastructure",
+              "sortData": "desc",
+              "barPadding": 0.1,
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "showValues": false,
+              "height": 200
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
