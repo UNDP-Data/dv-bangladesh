@@ -1,7 +1,7 @@
 {
   "dashboardId": "dashboard-id",
   "dataSettings": {
-    "dataURL": "https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/data/data.csv",
+    "dataURL": "/data/data.csv",
     "keyColumn": "shapeName",
     "fileType": "csv",
     "dataFilters": [
@@ -13,13 +13,47 @@
   },
   "readableHeader": [
     { "value": "flooded_cropland", "label": "Flooded cropland" },
-    { "value": "cropland_not-affected", "label": "Non-affected cropland" }
+    { "value": "cropland_not-affected", "label": "Non-affected cropland" },
+    { "value": "non_affected_pop_2024", "label": "Non-affected population" },
+    { "value": "flooded_pop_2024", "label": "Affected population" }
   ],
   "dashboardLayout": {
     "backgroundColor": false,
     "rows": [
       {
         "columns": [
+          {
+            "graphType": "treeMap",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": [
+                  "Affected population",
+                  "Non-affected population"
+                ]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected Population in Bangladesh",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "colors": ["var(--red)", "var(--gray-400)"]
+            }
+          },
           {
             "graphType": "donutChart",
             "columnWidth": 1,

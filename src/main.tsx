@@ -6,6 +6,7 @@ import AppPopulation from './AppPopulation';
 import AppInfrastructure from './AppInfrastructure';
 import AppPopulationFull from './AppPopulationFull';
 import AppPopulationMap from './AppPopulationMap';
+import AppUpazilasDashboard from './AppUpazilasDashboard';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -71,6 +72,15 @@ if (vizInfrastructure) {
   rootEmbed.render(
     <React.StrictMode>
       <AppInfrastructure />
+    </React.StrictMode>,
+  );
+}
+const vizUpazilasDashboard = getEl('[data-viz-upazilas-dashboard]');
+if (vizUpazilasDashboard) {
+  const rootEmbed = ReactDOM.createRoot(vizUpazilasDashboard);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppUpazilasDashboard />
     </React.StrictMode>,
   );
 }

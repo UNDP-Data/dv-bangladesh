@@ -20,7 +20,6 @@ function AppPopulationMap() {
           },
         ]}
         height={700}
-        graphTitle='Affected population by gender'
         zoomLevel={6.8}
         center={[91.49090645000001, 22.80350688816563]}
       />

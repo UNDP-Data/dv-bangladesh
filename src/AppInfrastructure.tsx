@@ -8,19 +8,18 @@ function AppInfrastructure() {
         mapStyle={[
           {
             style: 'https://geohub.data.undp.org/api/style/357.json',
-            name: 'Buildings',
+            name: 'Affected Buildings',
           },
           {
             style: 'https://geohub.data.undp.org/api/style/356.json',
-            name: 'Roads',
+            name: 'Affected Roads',
           },
           {
             style: 'https://geohub.data.undp.org/api/style/355.json',
-            name: 'Electricity Grids',
+            name: 'Affected Electricity Grids',
           },
         ]}
         height={700}
-        graphTitle='Affected infrastructure by type'
         zoomLevel={6.8}
         center={[91.49090645000001, 22.80350688816563]}
       />
