@@ -122,7 +122,7 @@
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
-                "columnId": "flooded_pop_2024",
+                "columnId": "flooded_grid_length",
                 "chartConfigId": "size"
               }
             ],
