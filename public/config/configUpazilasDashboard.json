@@ -1,7 +1,7 @@
 {
   "dashboardId": "dashboard-id",
   "dataSettings": {
-    "dataURL": "/data/data.csv",
+    "dataURL": "https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/data/data.csv",
     "keyColumn": "shapeName",
     "fileType": "csv",
     "dataFilters": [
