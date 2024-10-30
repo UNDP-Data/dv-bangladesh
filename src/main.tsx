@@ -5,6 +5,7 @@ import AppCropland from './AppCropland';
 import AppPopulation from './AppPopulation';
 import AppInfrastructure from './AppInfrastructure';
 import AppPopulationFull from './AppPopulationFull';
+import AppPopulationMap from './AppPopulationMap';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -25,6 +26,15 @@ if (vizPopulation) {
   rootEmbed.render(
     <React.StrictMode>
       <AppPopulation />
+    </React.StrictMode>,
+  );
+}
+const vizPopulationMap = getEl('[data-viz-population-map]');
+if (vizPopulationMap) {
+  const rootEmbed = ReactDOM.createRoot(vizPopulationMap);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppPopulationMap />
     </React.StrictMode>,
   );
 }
