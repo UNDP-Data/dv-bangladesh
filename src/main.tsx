@@ -4,6 +4,7 @@ import AppFloodedArea from './AppFloodedArea';
 import AppCropland from './AppCropland';
 import AppPopulation from './AppPopulation';
 import AppInfrastructure from './AppInfrastructure';
+import AppPopulationFull from './AppPopulationFull';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -24,6 +25,15 @@ if (vizPopulation) {
   rootEmbed.render(
     <React.StrictMode>
       <AppPopulation />
+    </React.StrictMode>,
+  );
+}
+const vizPopulationFull = getEl('[data-viz-population-full]');
+if (vizPopulationFull) {
+  const rootEmbed = ReactDOM.createRoot(vizPopulationFull);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppPopulationFull />
     </React.StrictMode>,
   );
 }
