@@ -4,8 +4,8 @@ import '@undp-data/undp-visualization-library/dist/style.css';
 function AppCropland() {
   return (
     <div>
-      <MultiGraphDashboardWideToLongFormatFromConfig config='/config/configCropland.json' />
-      {/* <MultiGraphDashboardWideToLongFormatFromConfig config='https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/config/configCropland.json' /> */}
+      {/* <MultiGraphDashboardWideToLongFormatFromConfig config='/config/configCropland.json' /> */}
+      <MultiGraphDashboardWideToLongFormatFromConfig config='https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/config/configCropland.json' />
     </div>
   );
 }
