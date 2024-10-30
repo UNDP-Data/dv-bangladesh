@@ -23,14 +23,14 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "total_flooded_building_area",
+                "column": "total_flooded_building",
                 "excludeValues": ["NA"]
               }
             ],
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
-                "columnId": "total_flooded_building_area",
+                "columnId": "flooded_building_count",
                 "chartConfigId": "size"
               }
             ],
@@ -44,37 +44,6 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "showValues": true,
-              "height": 700,
-              "showTicks": false
-            }
-          },
-          {
-            "graphType": "horizontalBarChart",
-            "columnWidth": 1,
-            "dataFilters": [
-              {
-                "column": "shapeName",
-                "excludeValues": ["Kawkhali (Betbunia)"]
-              }
-            ],
-            "graphDataConfiguration": [
-              { "columnId": "shapeName", "chartConfigId": "label" },
-              {
-                "columnId": "flooded_cropland",
-                "chartConfigId": "size"
-              }
-            ],
-            "settings": {
-              "graphTitle": "Affected cropland",
-              "graphDescription": "square meters",
-              "barPadding": 0.1,
-              "sortData": "desc",
-              "maxNumberOfBars": 20,
-              "leftMargin": 132,
-              "padding": "16px 32px 32px 16px",
-              "backgroundColor": "#FAFAFA",
-              "showValues": true,
-              "rightMargin": 64,
               "height": 700,
               "showTicks": false
             }

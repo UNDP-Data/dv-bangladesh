@@ -95,3 +95,12 @@ if (vizInfrastructureS) {
     </React.StrictMode>,
   );
 }
+const vizInfrastructureFull = getEl('[data-viz-infrastructure-full]');
+if (vizInfrastructureFull) {
+  const rootEmbed = ReactDOM.createRoot(vizInfrastructureFull);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppInfrastructureFull />
+    </React.StrictMode>,
+  );
+}

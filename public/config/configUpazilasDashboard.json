@@ -38,12 +38,37 @@
       "value": "non_affected_grid_length",
       "label": "Non-affected grids"
     },
-    { "value": "flooded_grid_length", "label": "Affected grids" }
+    { "value": "flooded_grid_length", "label": "Affected grids" },
+    {
+      "value": "flooded_rate_below_5_2024",
+      "label": "Affected children below 5"
+    },
+    {
+      "value": "flooded_rate_below_5_2024_reverse",
+      "label": "Non-affected children below 5"
+    },
+    {
+      "value": "flooded_rate_above_65_2024",
+      "label": "Affected people above 65"
+    },
+    {
+      "value": "flooded_rate_above_65_2024_reverse",
+      "label": "Non-affected people above 65"
+    },
+    {
+      "value": "flooded_building_count",
+      "label": "Affected buildings"
+    },
+    {
+      "value": "non_affected_building_count",
+      "label": "Non-affected buildings"
+    }
   ],
   "dashboardLayout": {
     "backgroundColor": false,
     "rows": [
       {
+        "height": 500,
         "columns": [
           {
             "graphType": "treeMap",
@@ -77,10 +102,50 @@
             ],
             "settings": {
               "graphTitle": "Affected population",
+              "graphDescription": "Number of people",
               "padding": "16px 32px 32px 16px",
-              "backgroundColor": "#FAFAFA"
+              "backgroundColor": "#FAFAFA",
+              "colors": ["#EE402D", "#D4D6D8"],
+              "showNAColor": false,
+              "colorLegendTitle": ""
             }
           },
+          {
+            "graphType": "donutChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": ["Female", "Male"]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected population by gender",
+              "graphDescription": "Number of people",
+              "padding": "16px 32px 32px 16px",
+              "leftMargin": 64,
+              "backgroundColor": "#FAFAFA",
+              "colors": ["#757AF0", "#02A38A"]
+            }
+          }
+        ]
+      },
+      {
+        "height": 500,
+        "columns": [
           {
             "graphType": "verticalBarChart",
             "columnWidth": 1,
@@ -105,17 +170,21 @@
             ],
             "settings": {
               "graphTitle": "Affected population by age groups",
+              "graphDescription": "Number of people",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA"
             }
           },
           {
-            "graphType": "verticalBarChart",
+            "graphType": "unitChart",
             "columnWidth": 1,
             "dataFilters": [
               {
                 "column": "indicator",
-                "includeValues": ["Female", "Male"]
+                "includeValues": [
+                  "Affected children below 5",
+                  "Non-affected children below 5"
+                ]
               }
             ],
             "graphDataConfiguration": [
@@ -128,22 +197,61 @@
               {
                 "columnId": "value",
 
-                "chartConfigId": "size"
+                "chartConfigId": "value"
               }
             ],
             "settings": {
-              "graphTitle": "Affected population by gender",
+              "graphTitle": "Affected population below 5 years old",
+              "graphDescription": "Percentage",
               "padding": "16px 32px 32px 16px",
-              "leftMargin": 64,
-              "backgroundColor": "#FAFAFA"
+              "backgroundColor": "#FAFAFA",
+              "colors": ["#EE402D", "#D4D6D8"],
+              "size": 1000,
+              "showNAColor": false,
+              "colorLegendTitle": ""
+            }
+          },
+          {
+            "graphType": "unitChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": [
+                  "Affected people above 65",
+                  "Non-affected people above 65"
+                ]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "value"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected population above 65 years old",
+              "graphDescription": "Percentage",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "colors": ["#EE402D", "#D4D6D8"],
+              "fillContainer": false
             }
           }
         ]
       },
       {
+        "height": 500,
         "columns": [
           {
-            "graphType": "donutChart",
+            "graphType": "treeMap",
             "columnWidth": 1,
             "dataFilters": [
               {
@@ -165,17 +273,25 @@
                 "columnId": "value",
 
                 "chartConfigId": "size"
+              },
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "color"
               }
             ],
             "settings": {
               "graphTitle": "Affected building area",
+              "graphDescription": "square meteres",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "colors": ["var(--red)", "var(--gray-400)"]
+              "colors": ["#EE402D", "#D4D6D8"],
+              "showNAColor": false,
+              "colorLegendTitle": ""
             }
           },
           {
-            "graphType": "donutChart",
+            "graphType": "treeMap",
             "columnWidth": 1,
             "dataFilters": [
               {
@@ -194,10 +310,55 @@
                 "columnId": "value",
 
                 "chartConfigId": "size"
+              },
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "color"
               }
             ],
             "settings": {
-              "graphTitle": "Affected croplands",
+              "graphTitle": "Affected cropland",
+              "graphDescription": "square meteres",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "colors": ["#EE402D", "#D4D6D8"],
+              "showNAColor": false,
+              "colorLegendTitle": ""
+            }
+          }
+        ]
+      },
+      {
+        "height": 500,
+        "columns": [
+          {
+            "graphType": "unitChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": [
+                  "Affected buildings",
+                  "Non-affected buildings"
+                ]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "value"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected buildings",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["var(--red)", "var(--gray-400)"]
