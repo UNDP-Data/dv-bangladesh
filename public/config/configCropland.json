@@ -5,7 +5,10 @@
     "keyColumn": "shapeName",
     "fileType": "csv"
   },
-  "debugMode": true,
+  "readableHeader": [
+    { "value": "flooded_cropland", "label": "Flooded cropland" },
+    { "value": "cropland_not-affected", "label": "Non-affected cropland" }
+  ],
   "dashboardLayout": {
     "backgroundColor": false,
     "rows": [
