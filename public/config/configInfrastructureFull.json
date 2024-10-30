@@ -24,7 +24,7 @@
             "dataFilters": [
               {
                 "column": "flooded_building_count",
-                "excludeValues": ["NA"]
+                "excludeValues": ["NA", null]
               }
             ],
             "graphDataConfiguration": [
@@ -35,8 +35,8 @@
               }
             ],
             "settings": {
-              "graphTitle": "Affected building area",
-              "graphDescription": "square meters",
+              "graphTitle": "Affected buildings",
+              "graphDescription": "count",
               "barPadding": 0.1,
               "sortData": "desc",
               "maxNumberOfBars": 20,
