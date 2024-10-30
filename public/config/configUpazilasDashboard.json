@@ -208,7 +208,8 @@
               "colors": ["#EE402D", "#D4D6D8"],
               "size": 1000,
               "showNAColor": false,
-              "colorLegendTitle": ""
+              "colorLegendTitle": "",
+              "leftMargin": 64
             }
           },
           {

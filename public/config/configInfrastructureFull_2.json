@@ -23,7 +23,7 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "total_flooded_building_area",
+                "column": "flooded_building_count",
                 "excludeValues": ["NA"]
               }
             ],
