@@ -15,7 +15,30 @@
     { "value": "flooded_cropland", "label": "Flooded cropland" },
     { "value": "cropland_not-affected", "label": "Non-affected cropland" },
     { "value": "non_affected_pop_2024", "label": "Non-affected population" },
-    { "value": "flooded_pop_2024", "label": "Affected population" }
+    { "value": "flooded_pop_2024", "label": "Affected population" },
+    {
+      "value": "flooded_female_pop_2024",
+      "label": "Female"
+    },
+    { "value": "flooded_male_pop_2024", "label": "Male" },
+    { "value": "flooded_child_pop_2024", "label": "Youth" },
+    { "value": "flooded_active_pop_2024", "label": "Adults" },
+    { "value": "flooded_elderly_pop_2024", "label": "Elderly" },
+    { "value": "non_affected_road_length", "label": "Non-affected roads" },
+    { "value": "flooded_road_length", "label": "Affected roads" },
+    {
+      "value": "non_affected_building_area",
+      "label": "Non-affected building area"
+    },
+    {
+      "value": "total_flooded_building_area",
+      "label": "Affected building area"
+    },
+    {
+      "value": "non_affected_grid_length",
+      "label": "Non-affected grids"
+    },
+    { "value": "flooded_grid_length", "label": "Affected grids" }
   ],
   "dashboardLayout": {
     "backgroundColor": false,
@@ -24,7 +47,7 @@
         "columns": [
           {
             "graphType": "treeMap",
-            "columnWidth": 1,
+            "columnWidth": 2,
             "dataFilters": [
               {
                 "column": "indicator",
@@ -45,10 +68,107 @@
                 "columnId": "value",
 
                 "chartConfigId": "size"
+              },
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "color"
               }
             ],
             "settings": {
-              "graphTitle": "Affected Population in Bangladesh",
+              "graphTitle": "Affected population",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA"
+            }
+          },
+          {
+            "graphType": "verticalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": ["Youth", "Adults", "Elderly"]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected population by age groups",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA"
+            }
+          },
+          {
+            "graphType": "verticalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": ["Female", "Male"]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected population by gender",
+              "padding": "16px 32px 32px 16px",
+              "leftMargin": 64,
+              "backgroundColor": "#FAFAFA"
+            }
+          }
+        ]
+      },
+      {
+        "columns": [
+          {
+            "graphType": "donutChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": [
+                  "Affected building area",
+                  "Non-affected building area"
+                ]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected building area",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["var(--red)", "var(--gray-400)"]
@@ -77,7 +197,65 @@
               }
             ],
             "settings": {
-              "graphTitle": "Affected Cropland in Bangladesh",
+              "graphTitle": "Affected croplands",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "colors": ["var(--red)", "var(--gray-400)"]
+            }
+          },
+          {
+            "graphType": "donutChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": ["Affected roads", "Non-affected roads"]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Road infrastucture",
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "colors": ["var(--red)", "var(--gray-400)"]
+            }
+          },
+          {
+            "graphType": "donutChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "indicator",
+                "includeValues": ["Affected grids", "Non-affected grids"]
+              }
+            ],
+            "graphDataConfiguration": [
+              {
+                "columnId": "indicator",
+
+                "chartConfigId": "label"
+              },
+
+              {
+                "columnId": "value",
+
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Electricity infrastucture",
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["var(--red)", "var(--gray-400)"]
