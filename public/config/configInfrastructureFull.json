@@ -16,7 +16,7 @@
     "padding": "0rem",
     "rows": [
       {
-        "height": 2000,
+        "height": 1600,
         "columns": [
           {
             "graphType": "horizontalBarChart",
