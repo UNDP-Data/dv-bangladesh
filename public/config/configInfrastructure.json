@@ -1,6 +1,6 @@
 {
   "dataSettings": {
-    "dataURL": "/data/data.csv",
+    "dataURL": "https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/data/data.csv?token=GHSAT0AAAAAACVJJDKIITZRPDAN6PZQLNFKZZB5PKQ",
     "keyColumn": "shapeName",
     "fileType": "csv"
   },
