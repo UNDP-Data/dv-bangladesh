@@ -34,15 +34,11 @@
                 "allowedColumnIds": [
                   {
                     "value": "flooded_building_count",
-                    "label": "Buildings"
+                    "label": "Count"
                   },
                   {
-                    "value": "flooded_road_length",
-                    "label": "Roads (metres)"
-                  },
-                  {
-                    "value": "flooded_grid_length",
-                    "label": "Grids (metres)"
+                    "value": "percentage_flooded",
+                    "label": "Percentage of total"
                   }
                 ],
                 "chartConfigId": "size"
@@ -56,7 +52,7 @@
               }
             ],
             "settings": {
-              "graphTitle": "Affected infrastructure by type",
+              "graphTitle": "Affected buildings",
               "barPadding": 0.1,
               "sortData": "desc",
               "leftMargin": 132,
@@ -83,16 +79,12 @@
                 "ui": "radio",
                 "allowedColumnIds": [
                   {
-                    "value": "percentage_flooded",
-                    "label": "Buildings"
+                    "value": "flooded_road_length",
+                    "label": "Metres"
                   },
                   {
                     "value": "percentage_flooded_roads",
-                    "label": "Roads"
-                  },
-                  {
-                    "value": "percentage_grid_flooded",
-                    "label": "Grids"
+                    "label": "Percentage of total"
                   }
                 ],
                 "chartConfigId": "size"
@@ -106,7 +98,54 @@
               }
             ],
             "settings": {
-              "graphTitle": "Infrastructure impact by type as percentage of total",
+              "graphTitle": "Affected roads",
+              "barPadding": 0.1,
+              "showTicks": false,
+              "showValues": true,
+              "sortData": "desc",
+              "leftMargin": 132,
+              "padding": "16px 32px 32px 16px",
+              "backgroundColor": "#FAFAFA",
+              "rightMargin": 64,
+              "height": 2000,
+              "graphDownload": true
+            }
+          },
+          {
+            "graphType": "horizontalBarChart",
+            "columnWidth": 1,
+            "dataFilters": [
+              {
+                "column": "shapeName",
+                "excludeValues": ["Kawkhali (Betbunia)"]
+              }
+            ],
+            "dataSelectionOptions": [
+              {
+                "label": "View by",
+                "ui": "radio",
+                "allowedColumnIds": [
+                  {
+                    "value": "flooded_grid_length",
+                    "label": "Metres"
+                  },
+                  {
+                    "value": "percentage_grid_flooded",
+                    "label": "Percentage of total"
+                  }
+                ],
+                "chartConfigId": "size"
+              }
+            ],
+            "graphDataConfiguration": [
+              { "columnId": "shapeName", "chartConfigId": "label" },
+              {
+                "columnId": "flooded_grid_length",
+                "chartConfigId": "size"
+              }
+            ],
+            "settings": {
+              "graphTitle": "Affected electricity grids",
               "barPadding": 0.1,
               "showTicks": false,
               "showValues": true,

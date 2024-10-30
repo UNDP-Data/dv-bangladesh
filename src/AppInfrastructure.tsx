@@ -8,15 +8,15 @@ function AppInfrastructure() {
         mapStyle={[
           {
             style: 'https://geohub.data.undp.org/api/style/357.json',
-            name: 'Affected buildings (%)',
+            name: 'Affected buildings (Percentage)',
           },
           {
             style: 'https://geohub.data.undp.org/api/style/356.json',
-            name: 'Affected Roads (%)',
+            name: 'Affected Roads (Percentage)',
           },
           {
             style: 'https://geohub.data.undp.org/api/style/355.json',
-            name: 'Affected Electricity Grids (%)',
+            name: 'Affected Electricity Grids (Percentage)',
           },
         ]}
         height={700}
