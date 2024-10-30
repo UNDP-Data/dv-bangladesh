@@ -32,14 +32,8 @@
             "settings": {
               "graphTitle": "Number of people affected by flood in Bangladesh",
               "graphDescription": "Top 20 most affected upazilas",
-              "sortData": "desc",
-              "barPadding": 0.1,
-              "leftMargin": 132,
-              "maxNumberOfBars": 20,
               "padding": "16px 32px 32px 16px",
-              "backgroundColor": "#FAFAFA",
-              "showValues": false,
-              "height": 512
+              "backgroundColor": "#FAFAFA"
             }
           }
         ]
