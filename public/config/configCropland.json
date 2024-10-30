@@ -5,6 +5,12 @@
     "keyColumn": "shapeName",
     "fileType": "csv"
   },
+  "dataFilters": [
+    {
+      "column": "shapeName",
+      "excludeValues": ["Kawkhali (Betbunia)"]
+    }
+  ],
   "readableHeader": [
     { "value": "flooded_cropland", "label": "Flooded cropland" },
     { "value": "cropland_not-affected", "label": "Non-affected cropland" }
@@ -20,11 +26,7 @@
             "dataFilters": [
               {
                 "column": "indicator",
-                "includeValues": ["flooded_cropland", "cropland_not-affected"]
-              },
-              {
-                "column": "value",
-                "excludeValues": ["NA"]
+                "includeValues": ["Flooded cropland", "Non-affected cropland"]
               }
             ],
             "graphDataConfiguration": [
@@ -41,10 +43,10 @@
               }
             ],
             "settings": {
-              "graphTitle": "Number of people affected by flood in Bangladesh",
-              "graphDescription": "Top 20 most affected upazilas",
+              "graphTitle": "Affected Cropland in Bangladesh",
               "padding": "16px 32px 32px 16px",
-              "backgroundColor": "#FAFAFA"
+              "backgroundColor": "#FAFAFA",
+              "colors": ["var(--red)", "var(--gray-400)"]
             }
           }
         ]
