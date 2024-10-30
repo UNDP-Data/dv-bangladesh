@@ -5,6 +5,7 @@
     "keyColumn": "shapeName",
     "fileType": "csv"
   },
+  "debugMode": true,
   "dashboardLayout": {
     "backgroundColor": false,
     "rows": [
@@ -15,17 +16,24 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "shapeName",
-                "excludeValues": ["Kawkhali (Betbunia)"]
+                "column": "indicator",
+                "includeValues": ["flooded_cropland", "cropland_not-affected"]
+              },
+              {
+                "column": "value",
+                "excludeValues": ["NA"]
               }
             ],
             "graphDataConfiguration": [
               {
-                "columnId": "shapeName",
+                "columnId": "indicator",
+
                 "chartConfigId": "label"
               },
+
               {
-                "columnId": ["flooded_cropland", "cropland_not-affected"],
+                "columnId": "value",
+
                 "chartConfigId": "size"
               }
             ],

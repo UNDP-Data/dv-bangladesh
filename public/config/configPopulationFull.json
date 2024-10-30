@@ -7,7 +7,7 @@
   "debugMode": true,
   "dashboardLayout": {
     "backgroundColor": false,
-    "padding": "1rem",
+    "padding": "0rem",
     "rows": [
       {
         "height": 1600,
