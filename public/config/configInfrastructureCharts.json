@@ -16,7 +16,7 @@
     "padding": "0rem",
     "rows": [
       {
-        "height": 2000,
+        "height": 700,
         "columns": [
           {
             "graphType": "horizontalBarChart",
@@ -27,23 +27,6 @@
                 "excludeValues": ["NA", null]
               }
             ],
-            "dataSelectionOptions": [
-              {
-                "label": "View by",
-                "ui": "radio",
-                "allowedColumnIds": [
-                  {
-                    "value": "flooded_building_count",
-                    "label": "Count"
-                  },
-                  {
-                    "value": "percentage_flooded",
-                    "label": "Percentage of total"
-                  }
-                ],
-                "chartConfigId": "size"
-              }
-            ],
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
@@ -52,15 +35,16 @@
               }
             ],
             "settings": {
-              "graphTitle": "Affected buildings",
+              "graphTitle": "Affected buildings (count)",
               "graphDescription": "Top 20 most affected upazilas",
               "barPadding": 0.1,
               "sortData": "desc",
+              "maxNumberOfBars": 20,
               "leftMargin": 132,
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "showValues": true,
-              "height": 2000,
+              "height": 700,
               "showTicks": false
             }
           },
@@ -73,23 +57,6 @@
                 "excludeValues": ["Kawkhali (Betbunia)"]
               }
             ],
-            "dataSelectionOptions": [
-              {
-                "label": "View by",
-                "ui": "radio",
-                "allowedColumnIds": [
-                  {
-                    "value": "flooded_road_length",
-                    "label": "Metres"
-                  },
-                  {
-                    "value": "percentage_flooded_roads",
-                    "label": "Percentage of total"
-                  }
-                ],
-                "chartConfigId": "size"
-              }
-            ],
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
@@ -98,16 +65,17 @@
               }
             ],
             "settings": {
-              "graphTitle": "Affected roads",
+              "graphTitle": "Affected roads (metres)",
               "graphDescription": "Top 20 most affected upazilas",
               "barPadding": 0.1,
               "showTicks": false,
               "showValues": true,
               "sortData": "desc",
+              "maxNumberOfBars": 20,
               "leftMargin": 132,
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "height": 2000,
+              "height": 700,
               "rightMargin": 64
             }
           },
@@ -120,23 +88,6 @@
                 "excludeValues": ["Kawkhali (Betbunia)"]
               }
             ],
-            "dataSelectionOptions": [
-              {
-                "label": "View by",
-                "ui": "radio",
-                "allowedColumnIds": [
-                  {
-                    "value": "flooded_grid_length",
-                    "label": "Metres"
-                  },
-                  {
-                    "value": "percentage_grid_flooded",
-                    "label": "Percentage of total"
-                  }
-                ],
-                "chartConfigId": "size"
-              }
-            ],
             "graphDataConfiguration": [
               { "columnId": "shapeName", "chartConfigId": "label" },
               {
@@ -145,16 +96,17 @@
               }
             ],
             "settings": {
-              "graphTitle": "Affected electricity grids",
+              "graphTitle": "Affected electricity grids (metres)",
               "graphDescription": "Top 20 most affected upazilas",
               "barPadding": 0.1,
               "showTicks": false,
               "showValues": true,
               "sortData": "desc",
+              "maxNumberOfBars": 20,
               "leftMargin": 132,
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "height": 2000,
+              "height": 700,
               "rightMargin": 64
             }
           }

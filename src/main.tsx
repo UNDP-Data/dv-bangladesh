@@ -8,7 +8,7 @@ import AppPopulationFull from './AppPopulationFull';
 import AppPopulationMap from './AppPopulationMap';
 import AppUpazilasDashboard from './AppUpazilasDashboard';
 import AppInfrastructureFull from './AppInfrastructureFull';
-import AppInfrastructureS from './AppInfrastructureS';
+import AppInfrastructureCharts from './AppInfrastructureCharts';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -86,12 +86,12 @@ if (vizUpazilasDashboard) {
     </React.StrictMode>,
   );
 }
-const vizInfrastructureS = getEl('[data-viz-infrastructure-s]');
-if (vizInfrastructureS) {
-  const rootEmbed = ReactDOM.createRoot(vizInfrastructureS);
+const vizInfrastructureCharts = getEl('[data-viz-infrastructure-charts]');
+if (vizInfrastructureCharts) {
+  const rootEmbed = ReactDOM.createRoot(vizInfrastructureCharts);
   rootEmbed.render(
     <React.StrictMode>
-      <AppInfrastructureS />
+      <AppInfrastructureCharts />
     </React.StrictMode>,
   );
 }
