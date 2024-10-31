@@ -1,7 +1,7 @@
 import { GeoHubMapWithLayerSelection } from '@undp-data/undp-visualization-library';
 import '@undp-data/undp-visualization-library/dist/style.css';
 
-function AppMapsCropland() {
+function AppMapsInfrastructure() {
   return (
     <div>
       <GeoHubMapWithLayerSelection
@@ -21,42 +21,42 @@ function AppMapsCropland() {
           'dd906f16-f5ae-4942-8cf5-ddb1ac58c072-label',
           'dd8f3ba7-9df3-44b6-8618-ea1f02f9fb12',
           'dd8f3ba7-9df3-44b6-8618-ea1f02f9fb12-label',
-          'c8782d59-1dae-4285-8345-57f1a61ef5ae',
-          'c8782d59-1dae-4285-8345-57f1a61ef5ae-label',
-          'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e',
-          'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e-label',
-          '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981',
-          '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981-label',
-          '180165c1-1b3f-4a8a-b31c-3b23adcb00fd',
-          '180165c1-1b3f-4a8a-b31c-3b23adcb00fd-label',
+          'a3aed2ff-524e-4888-8a97-1359eb70303f',
+          'a3aed2ff-524e-4888-8a97-1359eb70303f-label',
+          '996f49598-b3b5-42dd-9aa1-4b6571b8d828',
+          '996f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
+          '95cabf55-b81e-49ee-a817-c033eeb0b7e8',
+          '95cabf55-b81e-49ee-a817-c033eeb0b7e8-label',
+          'bb203d17-abb5-4ff5-923c-7ca2e47dbe74',
+          'bb203d17-abb5-4ff5-923c-7ca2e47dbe74-label',
         ]}
         layerSelection={[
           {
-            name: 'Flooded Cropland Area',
+            name: 'Flooded Buildings Area',
             layerID: [
-              'a3aed2ff-524e-4888-8a97-1359eb70303f',
-              'a3aed2ff-524e-4888-8a97-1359eb70303f-label',
+              'c8782d59-1dae-4285-8345-57f1a61ef5ae',
+              'c8782d59-1dae-4285-8345-57f1a61ef5ae-label',
             ],
           },
           {
-            name: 'Percentage of Flooded Cropland',
+            name: 'Percentage of Flooded Buildings',
             layerID: [
-              '996f49598-b3b5-42dd-9aa1-4b6571b8d828',
-              '996f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
+              'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e',
+              'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e-label',
             ],
           },
           {
-            name: 'Flooded Built-Up Area',
+            name: 'Percentage of Flooded Roads',
             layerID: [
-              '95cabf55-b81e-49ee-a817-c033eeb0b7e8',
-              '95cabf55-b81e-49ee-a817-c033eeb0b7e8-label',
+              '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981',
+              '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981-label',
             ],
           },
           {
-            name: 'Percentage of Flooded Built-Up Area',
+            name: 'Percentage of Flooded Grids',
             layerID: [
-              'bb203d17-abb5-4ff5-923c-7ca2e47dbe74',
-              'bb203d17-abb5-4ff5-923c-7ca2e47dbe74-label',
+              '180165c1-1b3f-4a8a-b31c-3b23adcb00fd',
+              '180165c1-1b3f-4a8a-b31c-3b23adcb00fd-label',
             ],
           },
         ]}
@@ -68,4 +68,4 @@ function AppMapsCropland() {
   );
 }
 
-export default AppMapsCropland;
+export default AppMapsInfrastructure;

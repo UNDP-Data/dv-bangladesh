@@ -12,6 +12,8 @@ import AppInfrastructureCharts from './AppInfrastructureCharts';
 import AppCroplandFull from './AppCroplandFull';
 import AppMapsAll from './AppMapsAll';
 import AppMapsPopulation from './AppMapsPopulation';
+import AppMapsInfrastructure from './AppMapsInfrastructure';
+import AppMapsCropland from './AppMapsCropland';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -131,6 +133,24 @@ if (vizMapsPopulation) {
   rootEmbed.render(
     <React.StrictMode>
       <AppMapsPopulation />
+    </React.StrictMode>,
+  );
+}
+const vizMapsCropland = getEl('[data-viz-maps-cropland]');
+if (vizMapsCropland) {
+  const rootEmbed = ReactDOM.createRoot(vizMapsCropland);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppMapsCropland />
+    </React.StrictMode>,
+  );
+}
+const vizMapsInfrastructure = getEl('[data-viz-maps-infrastructure]');
+if (vizMapsInfrastructure) {
+  const rootEmbed = ReactDOM.createRoot(vizMapsInfrastructure);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppMapsInfrastructure />
     </React.StrictMode>,
   );
 }

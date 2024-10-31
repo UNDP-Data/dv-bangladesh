@@ -6,24 +6,24 @@ function AppMapsPopulation() {
     <div>
       <GeoHubMapWithLayerSelection
         mapStyle='https://geohub.data.undp.org/api/style/362.json'
-        // excludeLayers={
-        //   ('a3aed2ff-524e-4888-8a97-1359eb70303f',
-        //   'a3aed2ff-524e-4888-8a97-1359eb70303f-label',
-        //   '996f49598-b3b5-42dd-9aa1-4b6571b8d828',
-        //   '996f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
-        //   '95cabf55-b81e-49ee-a817-c033eeb0b7e8',
-        //   '95cabf55-b81e-49ee-a817-c033eeb0b7e8-label',
-        //   'bb203d17-abb5-4ff5-923c-7ca2e47dbe74',
-        //   'bb203d17-abb5-4ff5-923c-7ca2e47dbe74-label',
-        //   'c8782d59-1dae-4285-8345-57f1a61ef5ae',
-        //   'c8782d59-1dae-4285-8345-57f1a61ef5ae-label',
-        //   'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e',
-        //   'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e-label',
-        //   '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981',
-        //   '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981-label',
-        //   '180165c1-1b3f-4a8a-b31c-3b23adcb00fd',
-        //   '180165c1-1b3f-4a8a-b31c-3b23adcb00fd-label')
-        // }
+        excludeLayers={[
+          'a3aed2ff-524e-4888-8a97-1359eb70303f',
+          'a3aed2ff-524e-4888-8a97-1359eb70303f-label',
+          '996f49598-b3b5-42dd-9aa1-4b6571b8d828',
+          '996f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
+          '95cabf55-b81e-49ee-a817-c033eeb0b7e8',
+          '95cabf55-b81e-49ee-a817-c033eeb0b7e8-label',
+          'bb203d17-abb5-4ff5-923c-7ca2e47dbe74',
+          'bb203d17-abb5-4ff5-923c-7ca2e47dbe74-label',
+          'c8782d59-1dae-4285-8345-57f1a61ef5ae',
+          'c8782d59-1dae-4285-8345-57f1a61ef5ae-label',
+          'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e',
+          'fad574dd-5a37-4ef5-b814-ed4c9ee6ea8e-label',
+          '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981',
+          '5ed5ba15-4cc1-4ce7-8238-6e5cabd43981-label',
+          '180165c1-1b3f-4a8a-b31c-3b23adcb00fd',
+          '180165c1-1b3f-4a8a-b31c-3b23adcb00fd-label',
+        ]}
         layerSelection={[
           {
             name: 'Affected Population',
