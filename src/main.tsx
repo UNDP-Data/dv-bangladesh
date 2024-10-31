@@ -11,6 +11,7 @@ import AppInfrastructureFull from './AppInfrastructureFull';
 import AppInfrastructureCharts from './AppInfrastructureCharts';
 import AppCroplandFull from './AppCroplandFull';
 import AppMapsAll from './AppMapsAll';
+import AppMapsPopulation from './AppMapsPopulation';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -121,6 +122,15 @@ if (vizMapsAll) {
   rootEmbed.render(
     <React.StrictMode>
       <AppMapsAll />
+    </React.StrictMode>,
+  );
+}
+const vizMapsPopulation = getEl('[data-viz-maps-population]');
+if (vizMapsPopulation) {
+  const rootEmbed = ReactDOM.createRoot(vizMapsPopulation);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppMapsPopulation />
     </React.StrictMode>,
   );
 }
