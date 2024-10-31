@@ -41,8 +41,8 @@ function AppMapsCropland() {
           {
             name: 'Percentage of Flooded Cropland',
             layerID: [
-              '996f49598-b3b5-42dd-9aa1-4b6571b8d828',
-              '996f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
+              '96f49598-b3b5-42dd-9aa1-4b6571b8d828',
+              '96f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
             ],
           },
           {
