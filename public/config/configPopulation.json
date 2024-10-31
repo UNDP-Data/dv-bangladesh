@@ -17,8 +17,12 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "shapeName",
-                "excludeValues": ["Kawkhali (Betbunia)"]
+                "column": "flooded_pop_2024",
+                "excludeValues": ["NA", null]
+              },
+              {
+                "column": "flooded_pop_2024_perc",
+                "excludeValues": ["NA", null]
               }
             ],
             "dataSelectionOptions": [
