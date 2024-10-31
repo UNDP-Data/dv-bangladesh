@@ -9,8 +9,8 @@ function AppMapsPopulation() {
         excludeLayers={[
           'a3aed2ff-524e-4888-8a97-1359eb70303f',
           'a3aed2ff-524e-4888-8a97-1359eb70303f-label',
-          '996f49598-b3b5-42dd-9aa1-4b6571b8d828',
-          '996f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
+          '96f49598-b3b5-42dd-9aa1-4b6571b8d828',
+          '96f49598-b3b5-42dd-9aa1-4b6571b8d828-label',
           '95cabf55-b81e-49ee-a817-c033eeb0b7e8',
           '95cabf55-b81e-49ee-a817-c033eeb0b7e8-label',
           'bb203d17-abb5-4ff5-923c-7ca2e47dbe74',

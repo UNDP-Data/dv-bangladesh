@@ -212,7 +212,8 @@
               "showNAColor": false,
               "colorLegendTitle": "",
               "leftMargin": 64,
-              "graphDownload": true
+              "graphDownload": true,
+              "size": 280
             }
           },
           {
@@ -246,7 +247,7 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["#EE402D", "#D4D6D8"],
-              "size": 300,
+              "size": 280,
               "fillContainer": false,
               "graphDownload": true
             }
@@ -370,7 +371,8 @@
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "colors": ["var(--red)", "var(--gray-400)"],
-              "graphDownload": true
+              "graphDownload": true,
+              "size": 280
             }
           },
           {
