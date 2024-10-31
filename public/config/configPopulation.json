@@ -4,13 +4,12 @@
     "dataURL": "https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/data/data.csv",
     "fileType": "csv"
   },
-  "debugMode": true,
   "dashboardLayout": {
     "backgroundColor": false,
     "padding": "0rem",
     "rows": [
       {
-        "height": 700,
+        "height": 800,
         "columns": [
           {
             "graphType": "horizontalBarChart",
@@ -51,15 +50,16 @@
             ],
             "settings": {
               "graphTitle": "Number of people affected by flood in Bangladesh",
-              "graphDescription": "Top 20 most affected upazilas",
               "sortData": "desc",
+              "graphDescription": "Top 20 most affected upazilas",
+              "maxNumberOfBars": 20,
               "barPadding": 0.1,
               "leftMargin": 132,
-              "maxNumberOfBars": 20,
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
               "showValues": false,
-              "height": 700
+              "height": 700,
+              "graphDownload": true
             }
           },
           {
@@ -127,13 +127,13 @@
             ],
             "settings": {
               "graphTitle": "Affected population by gender and age groups",
-              "graphDescription": "Top 20 most affected upazilas",
               "leftMargin": 132,
+              "graphDescription": "Top 20 most affected upazilas",
+              "maxNumberOfBars": 20,
               "padding": "16px 32px 32px 16px",
               "backgroundColor": "#FAFAFA",
-              "maxNumberOfBars": 20,
               "topMargin": 32,
-              "height": 666,
+              "height": 700,
               "colorDomain": ["Women", "Men", "Youth", "Adults", "Elderly"],
               "showValues": false,
               "graphDownload": true

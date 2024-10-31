@@ -4,7 +4,6 @@
     "dataURL": "https://raw.githubusercontent.com/UNDP-Data/dv-bangladesh/refs/heads/main/public/data/data.csv",
     "fileType": "csv"
   },
-  "debugMode": true,
   "dashboardLayout": {
     "backgroundColor": false,
     "padding": "0rem",
@@ -17,8 +16,12 @@
             "columnWidth": 1,
             "dataFilters": [
               {
-                "column": "shapeName",
-                "excludeValues": ["Kawkhali (Betbunia)"]
+                "column": "flooded_pop_2024",
+                "excludeValues": ["NA", null]
+              },
+              {
+                "column": "flooded_pop_2024_perc",
+                "excludeValues": ["NA", null]
               }
             ],
             "dataSelectionOptions": [
