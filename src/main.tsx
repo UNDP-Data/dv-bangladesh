@@ -10,6 +10,7 @@ import AppUpazilasDashboard from './AppUpazilasDashboard';
 import AppInfrastructureFull from './AppInfrastructureFull';
 import AppInfrastructureCharts from './AppInfrastructureCharts';
 import AppCroplandFull from './AppCroplandFull';
+import AppMapsAll from './AppMapsAll';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -111,6 +112,15 @@ if (vizInfrastructureFull) {
   rootEmbed.render(
     <React.StrictMode>
       <AppInfrastructureFull />
+    </React.StrictMode>,
+  );
+}
+const vizMapsAll = getEl('[data-viz-maps-all]');
+if (vizMapsAll) {
+  const rootEmbed = ReactDOM.createRoot(vizMapsAll);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppMapsAll />
     </React.StrictMode>,
   );
 }
