@@ -1,19 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppFloodedArea from './AppFloodedArea';
 import AppCropland from './AppCropland';
-import AppPopulation from './AppPopulation';
-import AppInfrastructure from './AppInfrastructure';
 import AppPopulationFull from './AppPopulationFull';
-import AppPopulationMap from './AppPopulationMap';
-import AppUpazilasDashboard from './AppUpazilasDashboard';
 import AppInfrastructureFull from './AppInfrastructureFull';
-import AppInfrastructureCharts from './AppInfrastructureCharts';
 import AppCroplandFull from './AppCroplandFull';
-import AppMapsAll from './AppMapsAll';
-import AppMapsPopulation from './AppMapsPopulation';
-import AppMapsInfrastructure from './AppMapsInfrastructure';
-import AppMapsCropland from './AppMapsCropland';
+import AppPopulationTop20 from './AppPopulationTop20';
+import AppGeohubCompareMap from './AppGeohubCompareMap';
+import AppDashboard from './AppUpazilasDashboard';
+import AppInfrastructureTop20 from './AppInfrastructureTop20';
+import AppGeohubMapAll from './AppMapsAll';
+import AppCroplandMap from './AppCroplandMap';
+import AppInfrastructureMap from './AppInfrastructureMap';
+import AppInfrastructureTable from './AppInfrastructureTable';
+import AppCroplandTable from './AppCroplandTable';
+import AppPopulationTable from './AppPopulationTable';
 
 const getEl = (embedSelector: string) => {
   if (typeof embedSelector === 'string') {
@@ -28,24 +28,16 @@ const getEl = (embedSelector: string) => {
   return embedSelector;
 };
 
-const vizPopulation = getEl('[data-viz-population]');
-if (vizPopulation) {
-  const rootEmbed = ReactDOM.createRoot(vizPopulation);
+const vizPopulationTop20 = getEl('[data-viz-population-top20]');
+if (vizPopulationTop20) {
+  const rootEmbed = ReactDOM.createRoot(vizPopulationTop20);
   rootEmbed.render(
     <React.StrictMode>
-      <AppPopulation />
+      <AppPopulationTop20 />
     </React.StrictMode>,
   );
 }
-const vizPopulationMap = getEl('[data-viz-population-map]');
-if (vizPopulationMap) {
-  const rootEmbed = ReactDOM.createRoot(vizPopulationMap);
-  rootEmbed.render(
-    <React.StrictMode>
-      <AppPopulationMap />
-    </React.StrictMode>,
-  );
-}
+
 const vizPopulationFull = getEl('[data-viz-population-full]');
 if (vizPopulationFull) {
   const rootEmbed = ReactDOM.createRoot(vizPopulationFull);
@@ -73,39 +65,31 @@ if (vizCroplandFull) {
     </React.StrictMode>,
   );
 }
-const vizFloodedArea = getEl('[data-viz-flooded-area]');
-if (vizFloodedArea) {
-  const rootEmbed = ReactDOM.createRoot(vizFloodedArea);
+const vizGeohubCompareMap = getEl('[data-viz-geohub-compare-map]');
+if (vizGeohubCompareMap) {
+  const rootEmbed = ReactDOM.createRoot(vizGeohubCompareMap);
   rootEmbed.render(
     <React.StrictMode>
-      <AppFloodedArea />
+      <AppGeohubCompareMap />
     </React.StrictMode>,
   );
 }
-const vizInfrastructure = getEl('[data-viz-infrastructure]');
-if (vizInfrastructure) {
-  const rootEmbed = ReactDOM.createRoot(vizInfrastructure);
+
+const vizDashboard = getEl('[data-viz-dashboard]');
+if (vizDashboard) {
+  const rootEmbed = ReactDOM.createRoot(vizDashboard);
   rootEmbed.render(
     <React.StrictMode>
-      <AppInfrastructure />
+      <AppDashboard />
     </React.StrictMode>,
   );
 }
-const vizUpazilasDashboard = getEl('[data-viz-upazilas-dashboard]');
-if (vizUpazilasDashboard) {
-  const rootEmbed = ReactDOM.createRoot(vizUpazilasDashboard);
+const vizInfrastructureTop20 = getEl('[data-viz-infrastructure-top20]');
+if (vizInfrastructureTop20) {
+  const rootEmbed = ReactDOM.createRoot(vizInfrastructureTop20);
   rootEmbed.render(
     <React.StrictMode>
-      <AppUpazilasDashboard />
-    </React.StrictMode>,
-  );
-}
-const vizInfrastructureCharts = getEl('[data-viz-infrastructure-charts]');
-if (vizInfrastructureCharts) {
-  const rootEmbed = ReactDOM.createRoot(vizInfrastructureCharts);
-  rootEmbed.render(
-    <React.StrictMode>
-      <AppInfrastructureCharts />
+      <AppInfrastructureTop20 />
     </React.StrictMode>,
   );
 }
@@ -118,39 +102,67 @@ if (vizInfrastructureFull) {
     </React.StrictMode>,
   );
 }
-const vizMapsAll = getEl('[data-viz-maps-all]');
-if (vizMapsAll) {
-  const rootEmbed = ReactDOM.createRoot(vizMapsAll);
+const vizGeohubMapAll = getEl('[data-viz-geohub-map-all]');
+if (vizGeohubMapAll) {
+  const rootEmbed = ReactDOM.createRoot(vizGeohubMapAll);
   rootEmbed.render(
     <React.StrictMode>
-      <AppMapsAll />
+      <AppGeohubMapAll />
     </React.StrictMode>,
   );
 }
-const vizMapsPopulation = getEl('[data-viz-maps-population]');
-if (vizMapsPopulation) {
-  const rootEmbed = ReactDOM.createRoot(vizMapsPopulation);
+const vizMapsPopulationTop20 = getEl('[data-viz-maps-population-top20]');
+if (vizMapsPopulationTop20) {
+  const rootEmbed = ReactDOM.createRoot(vizMapsPopulationTop20);
   rootEmbed.render(
     <React.StrictMode>
-      <AppMapsPopulation />
+      <AppPopulationTop20 />
     </React.StrictMode>,
   );
 }
-const vizMapsCropland = getEl('[data-viz-maps-cropland]');
-if (vizMapsCropland) {
-  const rootEmbed = ReactDOM.createRoot(vizMapsCropland);
+const vizCroplandMap = getEl('[data-viz-cropland-map]');
+if (vizCroplandMap) {
+  const rootEmbed = ReactDOM.createRoot(vizCroplandMap);
   rootEmbed.render(
     <React.StrictMode>
-      <AppMapsCropland />
+      <AppCroplandMap />
     </React.StrictMode>,
   );
 }
-const vizMapsInfrastructure = getEl('[data-viz-maps-infrastructure]');
-if (vizMapsInfrastructure) {
-  const rootEmbed = ReactDOM.createRoot(vizMapsInfrastructure);
+const vizInfrastructureMap = getEl('[data-viz-infrastructure-map]');
+if (vizInfrastructureMap) {
+  const rootEmbed = ReactDOM.createRoot(vizInfrastructureMap);
   rootEmbed.render(
     <React.StrictMode>
-      <AppMapsInfrastructure />
+      <AppInfrastructureMap />
+    </React.StrictMode>,
+  );
+}
+
+const vizInfrastructureTable = getEl('[data-viz-infrastructure-table]');
+if (vizInfrastructureTable) {
+  const rootEmbed = ReactDOM.createRoot(vizInfrastructureTable);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppInfrastructureTable />
+    </React.StrictMode>,
+  );
+}
+const vizCroplandTable = getEl('[data-viz-cropland-table]');
+if (vizCroplandTable) {
+  const rootEmbed = ReactDOM.createRoot(vizCroplandTable);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppCroplandTable />
+    </React.StrictMode>,
+  );
+}
+const vizPopulationTable = getEl('[data-viz-population-table]');
+if (vizPopulationTable) {
+  const rootEmbed = ReactDOM.createRoot(vizPopulationTable);
+  rootEmbed.render(
+    <React.StrictMode>
+      <AppPopulationTable />
     </React.StrictMode>,
   );
 }
